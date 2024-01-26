@@ -1,13 +1,23 @@
 const translations = {
+  "select" : {},
   "malay" : {
-    "hello" : "Hai",
-    "world" : "Dunia",
-    "welcome" : "Selamat Datang",
-    "goodbye" : "Selamat Tinggal",
-    "thank you" : "Terima Kasih"
+    "Hi" : "Hai",
+    "Welcome" : "Selamat Datang",
+    "Goodbye" : "Selamat Tinggal",
+  },
+  "spanish" : {
+    "Hi" : "Hola",
+    "Welcome" : "Bienvenido",
+    "Goodbye" : "Adios",
   },
 };
 
 export function translate(language, inputText) {
-  return translations[language][inputText];
-}
+  const word =  translations[language][inputText];
+
+  if (word) {
+    return `Translation: ${word}`;
+  } else {
+    return "Input not found or language not choossed";
+  }
+};

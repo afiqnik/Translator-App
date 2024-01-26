@@ -13,11 +13,15 @@
   <img src="translator-man.png" alt="" height="300px">
   <input type="text" id="inputText" placeholder="Type your text here"></input>
   <select id="language">
+    <option value="select">Select...</option>
     <option value="malay">Malay</option>
     <option value="spanish">Spanish</option>
   </select>
   <button id="translateButton" onclick="translateText()">Translate</button>
   <div id="translatedText"></div>
+  <div class="exampleWords">
+    <p>Available words for testing: Hi, Welcome, Goodbye</p> 
+  </div>
 
   <script type="module" src="script.js"></script>
 </body>
